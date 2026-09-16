@@ -1,0 +1,187 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title>be1.ru</title>
+</head>
+<body>
+<p>&lt;!DOCTYPE html&gt;<br />
+&lt;html lang=&quot;ru&quot;&gt;<br />
+&lt;head&gt;<br />
+&nbsp; &nbsp; &lt;meta charset=&quot;UTF-8&quot;&gt;<br />
+&nbsp; &nbsp; &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;<br />
+&nbsp; &nbsp; &lt;title&gt;Be + Prepositions Game&lt;/title&gt;<br />
+&nbsp; &nbsp; &lt;style&gt;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; body {<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; font-family: Arial, sans-serif;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; max-width: 800px;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; margin: 0 auto;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; padding: 20px;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; background: #e8f5e9;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; }<br />
+&nbsp; &nbsp; &nbsp; &nbsp; .container {<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; background: white;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; padding: 30px;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; border-radius: 10px;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; box-shadow: 0 2px 10px rgba(0,0,0,0.1);<br />
+&nbsp; &nbsp; &nbsp; &nbsp; }<br />
+&nbsp; &nbsp; &nbsp; &nbsp; h1 {<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; color: #2e7d32;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; text-align: center;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; }<br />
+&nbsp; &nbsp; &nbsp; &nbsp; .question {<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; font-size: 24px;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; margin: 30px 0;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; padding: 20px;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; background: #f1f8e9;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; border-radius: 8px;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; }<br />
+&nbsp; &nbsp; &nbsp; &nbsp; .options {<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; display: grid;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; grid-template-columns: 1fr 1fr;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; gap: 15px;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; }<br />
+&nbsp; &nbsp; &nbsp; &nbsp; button {<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; padding: 15px 20px;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; font-size: 18px;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; border: 2px solid #4caf50;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; background: white;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; color: #2e7d32;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; border-radius: 8px;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; cursor: pointer;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; transition: all 0.3s;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; }<br />
+&nbsp; &nbsp; &nbsp; &nbsp; button:hover {<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; background: #4caf50;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; color: white;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; }<br />
+&nbsp; &nbsp; &nbsp; &nbsp; button.correct {<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; background: #4caf50;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; color: white;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; }<br />
+&nbsp; &nbsp; &nbsp; &nbsp; button.wrong {<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; background: #f44336;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; color: white;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; }<br />
+&nbsp; &nbsp; &nbsp; &nbsp; .score {<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; text-align: center;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; font-size: 20px;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; margin: 20px 0;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; color: #2e7d32;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; }<br />
+&nbsp; &nbsp; &nbsp; &nbsp; .result {<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; text-align: center;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; font-size: 24px;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; margin: 20px 0;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; padding: 20px;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; background: #c8e6c9;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; border-radius: 8px;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; }<br />
+&nbsp; &nbsp; &lt;/style&gt;<br />
+&lt;/head&gt;<br />
+&lt;body&gt;<br />
+&nbsp; &nbsp; &lt;div class=&quot;container&quot;&gt;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &lt;h1&gt; Be + Prepositions Game&lt;/h1&gt;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &lt;div class=&quot;score&quot;&gt;Score: &lt;span id=&quot;score&quot;&gt;0&lt;/span&gt; / &lt;span id=&quot;total&quot;&gt;0&lt;/span&gt;&lt;/div&gt;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &lt;div id=&quot;game&quot;&gt;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;div class=&quot;question&quot; id=&quot;question&quot;&gt;&lt;/div&gt;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;div class=&quot;options&quot; id=&quot;options&quot;&gt;&lt;/div&gt;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &lt;/div&gt;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &lt;div id=&quot;finalResult&quot; style=&quot;display:none;&quot;&gt;&lt;/div&gt;<br />
+&nbsp; &nbsp; &lt;/div&gt;</p>
+
+<p>&nbsp; &nbsp; &lt;script&gt;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; const questions = [<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; { sentence: &quot;She is good ___ mathematics&quot;, correct: &quot;at&quot;, options: [&quot;at&quot;, &quot;in&quot;, &quot;on&quot;, &quot;of&quot;] },<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; { sentence: &quot;He is fond ___ classical music&quot;, correct: &quot;of&quot;, options: [&quot;of&quot;, &quot;about&quot;, &quot;with&quot;, &quot;for&quot;] },<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; { sentence: &quot;They are interested ___ learning English&quot;, correct: &quot;in&quot;, options: [&quot;in&quot;, &quot;on&quot;, &quot;at&quot;, &quot;of&quot;] },<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; { sentence: &quot;I am tired ___ doing homework&quot;, correct: &quot;of&quot;, options: [&quot;of&quot;, &quot;from&quot;, &quot;with&quot;, &quot;about&quot;] },<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; { sentence: &quot;She is afraid ___ spiders&quot;, correct: &quot;of&quot;, options: [&quot;of&quot;, &quot;from&quot;, &quot;with&quot;, &quot;about&quot;] },<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; { sentence: &quot;He is keen ___ football&quot;, correct: &quot;on&quot;, options: [&quot;on&quot;, &quot;in&quot;, &quot;at&quot;, &quot;of&quot;] },<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; { sentence: &quot;We are proud ___ our son&quot;, correct: &quot;of&quot;, options: [&quot;of&quot;, &quot;for&quot;, &quot;about&quot;, &quot;with&quot;] },<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; { sentence: &quot;She is married ___ a doctor&quot;, correct: &quot;to&quot;, options: [&quot;to&quot;, &quot;with&quot;, &quot;for&quot;, &quot;of&quot;] },<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; { sentence: &quot;He is responsible ___ the project&quot;, correct: &quot;for&quot;, options: [&quot;for&quot;, &quot;of&quot;, &quot;about&quot;, &quot;with&quot;] },<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; { sentence: &quot;I am bored ___ this movie&quot;, correct: &quot;with&quot;, options: [&quot;with&quot;, &quot;of&quot;, &quot;from&quot;, &quot;about&quot;] },<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; { sentence: &quot;She is famous ___ her paintings&quot;, correct: &quot;for&quot;, options: [&quot;for&quot;, &quot;of&quot;, &quot;about&quot;, &quot;with&quot;] },<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; { sentence: &quot;He is addicted ___ video games&quot;, correct: &quot;to&quot;, options: [&quot;to&quot;, &quot;with&quot;, &quot;for&quot;, &quot;of&quot;] },<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; { sentence: &quot;They are pleased ___ the results&quot;, correct: &quot;with&quot;, options: [&quot;with&quot;, &quot;of&quot;, &quot;about&quot;, &quot;for&quot;] },<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; { sentence: &quot;She is worried ___ the exam&quot;, correct: &quot;about&quot;, options: [&quot;about&quot;, &quot;of&quot;, &quot;for&quot;, &quot;with&quot;] },<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; { sentence: &quot;He is bad ___ remembering names&quot;, correct: &quot;at&quot;, options: [&quot;at&quot;, &quot;in&quot;, &quot;on&quot;, &quot;of&quot;] }<br />
+&nbsp; &nbsp; &nbsp; &nbsp; ];</p>
+
+<p>&nbsp; &nbsp; &nbsp; &nbsp; let currentQuestion = 0;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; let score = 0;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; let shuffledQuestions = [...questions].sort(() =&gt; Math.random() - 0.5);</p>
+
+<p>&nbsp; &nbsp; &nbsp; &nbsp; function showQuestion() {<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; if (currentQuestion &gt;= shuffledQuestions.length) {<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; showFinalResult();<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; return;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }</p>
+
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; const q = shuffledQuestions[currentQuestion];<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; document.getElementById(&#39;question&#39;).textContent = q.sentence;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; document.getElementById(&#39;score&#39;).textContent = score;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; document.getElementById(&#39;total&#39;).textContent = shuffledQuestions.length;</p>
+
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; const optionsDiv = document.getElementById(&#39;options&#39;);<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; optionsDiv.innerHTML = &#39;&#39;;</p>
+
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; const shuffledOptions = [...q.options].sort(() =&gt; Math.random() - 0.5);<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; shuffledOptions.forEach(option =&gt; {<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; const btn = document.createElement(&#39;button&#39;);<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; btn.textContent = option;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; btn.onclick = () =&gt; checkAnswer(option, q.correct, btn);<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; optionsDiv.appendChild(btn);<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; });<br />
+&nbsp; &nbsp; &nbsp; &nbsp; }</p>
+
+<p>&nbsp; &nbsp; &nbsp; &nbsp; function checkAnswer(selected, correct, btn) {<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; const buttons = document.querySelectorAll(&#39;button&#39;);<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; buttons.forEach(b =&gt; b.disabled = true);</p>
+
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; if (selected === correct) {<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; btn.classList.add(&#39;correct&#39;);<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; score++;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; } else {<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; btn.classList.add(&#39;wrong&#39;);<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; buttons.forEach(b =&gt; {<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; if (b.textContent === correct) b.classList.add(&#39;correct&#39;);<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; });<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }</p>
+
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; setTimeout(() =&gt; {<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; currentQuestion++;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; showQuestion();<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }, 1500);<br />
+&nbsp; &nbsp; &nbsp; &nbsp; }</p>
+
+<p>&nbsp; &nbsp; &nbsp; &nbsp; function showFinalResult() {<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; document.getElementById(&#39;game&#39;).style.display = &#39;none&#39;;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; const resultDiv = document.getElementById(&#39;finalResult&#39;);<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; resultDiv.style.display = &#39;block&#39;;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; let message = &#39;&#39;;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; const percentage = (score / shuffledQuestions.length) * 100;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; if (percentage === 100) message = &#39;🏆 Excellent! Perfect score!&#39;;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; else if (percentage &gt;= 80) message = &#39;🌟 Great job!&#39;;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; else if (percentage &gt;= 60) message = &#39;👍 Good effort!&#39;;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; else message = &#39;📖 Keep practicing!&#39;;</p>
+
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; resultDiv.innerHTML = `<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;div class=&quot;result&quot;&gt;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;h2&gt;Game Over!&lt;/h2&gt;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;p&gt;Your score: ${score} out of ${shuffledQuestions.length}&lt;/p&gt;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;p&gt;${message}&lt;/p&gt;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;button onclick=&quot;location.reload()&quot;&gt;Play Again&lt;/button&gt;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/div&gt;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; `;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; }</p>
+
+<p>&nbsp; &nbsp; &nbsp; &nbsp; showQuestion();<br />
+&nbsp; &nbsp; &lt;/script&gt;<br />
+&lt;/body&gt;<br />
+&lt;/html&gt;</p>
+</body>
+</html>
