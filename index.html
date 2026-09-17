@@ -1,187 +1,473 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
 <html>
 <head>
-	<title>be1.ru</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2487.7">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 16.0px 'Helvetica Neue'; color: #141414; -webkit-text-stroke: #141414}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 16.0px 'Helvetica Neue'; color: #141414; -webkit-text-stroke: #141414; min-height: 18.0px}
+    p.p3 {margin: 0.0px 0.0px 0.0px 0.0px; font: 16.0px 'Helvetica Neue'; color: #141414; -webkit-text-stroke: #141414; background-color: #ffffff}
+    span.s1 {font-kerning: none; background-color: #ffffff}
+    span.s2 {font-kerning: none}
+  </style>
 </head>
 <body>
-<p>&lt;!DOCTYPE html&gt;<br />
-&lt;html lang=&quot;ru&quot;&gt;<br />
-&lt;head&gt;<br />
-&nbsp; &nbsp; &lt;meta charset=&quot;UTF-8&quot;&gt;<br />
-&nbsp; &nbsp; &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;<br />
-&nbsp; &nbsp; &lt;title&gt;Be + Prepositions Game&lt;/title&gt;<br />
-&nbsp; &nbsp; &lt;style&gt;<br />
-&nbsp; &nbsp; &nbsp; &nbsp; body {<br />
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; font-family: Arial, sans-serif;<br />
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; max-width: 800px;<br />
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; margin: 0 auto;<br />
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; padding: 20px;<br />
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; background: #e8f5e9;<br />
-&nbsp; &nbsp; &nbsp; &nbsp; }<br />
-&nbsp; &nbsp; &nbsp; &nbsp; .container {<br />
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; background: white;<br />
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; padding: 30px;<br />
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; border-radius: 10px;<br />
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; box-shadow: 0 2px 10px rgba(0,0,0,0.1);<br />
-&nbsp; &nbsp; &nbsp; &nbsp; }<br />
-&nbsp; &nbsp; &nbsp; &nbsp; h1 {<br />
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; color: #2e7d32;<br />
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; text-align: center;<br />
-&nbsp; &nbsp; &nbsp; &nbsp; }<br />
-&nbsp; &nbsp; &nbsp; &nbsp; .question {<br />
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; font-size: 24px;<br />
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; margin: 30px 0;<br />
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; padding: 20px;<br />
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; background: #f1f8e9;<br />
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; border-radius: 8px;<br />
-&nbsp; &nbsp; &nbsp; &nbsp; }<br />
-&nbsp; &nbsp; &nbsp; &nbsp; .options {<br />
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; display: grid;<br />
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; grid-template-columns: 1fr 1fr;<br />
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; gap: 15px;<br />
-&nbsp; &nbsp; &nbsp; &nbsp; }<br />
-&nbsp; &nbsp; &nbsp; &nbsp; button {<br />
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; padding: 15px 20px;<br />
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; font-size: 18px;<br />
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; border: 2px solid #4caf50;<br />
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; background: white;<br />
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; color: #2e7d32;<br />
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; border-radius: 8px;<br />
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; cursor: pointer;<br />
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; transition: all 0.3s;<br />
-&nbsp; &nbsp; &nbsp; &nbsp; }<br />
-&nbsp; &nbsp; &nbsp; &nbsp; button:hover {<br />
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; background: #4caf50;<br />
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; color: white;<br />
-&nbsp; &nbsp; &nbsp; &nbsp; }<br />
-&nbsp; &nbsp; &nbsp; &nbsp; button.correct {<br />
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; background: #4caf50;<br />
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; color: white;<br />
-&nbsp; &nbsp; &nbsp; &nbsp; }<br />
-&nbsp; &nbsp; &nbsp; &nbsp; button.wrong {<br />
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; background: #f44336;<br />
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; color: white;<br />
-&nbsp; &nbsp; &nbsp; &nbsp; }<br />
-&nbsp; &nbsp; &nbsp; &nbsp; .score {<br />
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; text-align: center;<br />
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; font-size: 20px;<br />
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; margin: 20px 0;<br />
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; color: #2e7d32;<br />
-&nbsp; &nbsp; &nbsp; &nbsp; }<br />
-&nbsp; &nbsp; &nbsp; &nbsp; .result {<br />
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; text-align: center;<br />
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; font-size: 24px;<br />
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; margin: 20px 0;<br />
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; padding: 20px;<br />
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; background: #c8e6c9;<br />
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; border-radius: 8px;<br />
-&nbsp; &nbsp; &nbsp; &nbsp; }<br />
-&nbsp; &nbsp; &lt;/style&gt;<br />
-&lt;/head&gt;<br />
-&lt;body&gt;<br />
-&nbsp; &nbsp; &lt;div class=&quot;container&quot;&gt;<br />
-&nbsp; &nbsp; &nbsp; &nbsp; &lt;h1&gt; Be + Prepositions Game&lt;/h1&gt;<br />
-&nbsp; &nbsp; &nbsp; &nbsp; &lt;div class=&quot;score&quot;&gt;Score: &lt;span id=&quot;score&quot;&gt;0&lt;/span&gt; / &lt;span id=&quot;total&quot;&gt;0&lt;/span&gt;&lt;/div&gt;<br />
-&nbsp; &nbsp; &nbsp; &nbsp; &lt;div id=&quot;game&quot;&gt;<br />
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;div class=&quot;question&quot; id=&quot;question&quot;&gt;&lt;/div&gt;<br />
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;div class=&quot;options&quot; id=&quot;options&quot;&gt;&lt;/div&gt;<br />
-&nbsp; &nbsp; &nbsp; &nbsp; &lt;/div&gt;<br />
-&nbsp; &nbsp; &nbsp; &nbsp; &lt;div id=&quot;finalResult&quot; style=&quot;display:none;&quot;&gt;&lt;/div&gt;<br />
-&nbsp; &nbsp; &lt;/div&gt;</p>
-
-<p>&nbsp; &nbsp; &lt;script&gt;<br />
-&nbsp; &nbsp; &nbsp; &nbsp; const questions = [<br />
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; { sentence: &quot;She is good ___ mathematics&quot;, correct: &quot;at&quot;, options: [&quot;at&quot;, &quot;in&quot;, &quot;on&quot;, &quot;of&quot;] },<br />
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; { sentence: &quot;He is fond ___ classical music&quot;, correct: &quot;of&quot;, options: [&quot;of&quot;, &quot;about&quot;, &quot;with&quot;, &quot;for&quot;] },<br />
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; { sentence: &quot;They are interested ___ learning English&quot;, correct: &quot;in&quot;, options: [&quot;in&quot;, &quot;on&quot;, &quot;at&quot;, &quot;of&quot;] },<br />
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; { sentence: &quot;I am tired ___ doing homework&quot;, correct: &quot;of&quot;, options: [&quot;of&quot;, &quot;from&quot;, &quot;with&quot;, &quot;about&quot;] },<br />
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; { sentence: &quot;She is afraid ___ spiders&quot;, correct: &quot;of&quot;, options: [&quot;of&quot;, &quot;from&quot;, &quot;with&quot;, &quot;about&quot;] },<br />
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; { sentence: &quot;He is keen ___ football&quot;, correct: &quot;on&quot;, options: [&quot;on&quot;, &quot;in&quot;, &quot;at&quot;, &quot;of&quot;] },<br />
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; { sentence: &quot;We are proud ___ our son&quot;, correct: &quot;of&quot;, options: [&quot;of&quot;, &quot;for&quot;, &quot;about&quot;, &quot;with&quot;] },<br />
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; { sentence: &quot;She is married ___ a doctor&quot;, correct: &quot;to&quot;, options: [&quot;to&quot;, &quot;with&quot;, &quot;for&quot;, &quot;of&quot;] },<br />
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; { sentence: &quot;He is responsible ___ the project&quot;, correct: &quot;for&quot;, options: [&quot;for&quot;, &quot;of&quot;, &quot;about&quot;, &quot;with&quot;] },<br />
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; { sentence: &quot;I am bored ___ this movie&quot;, correct: &quot;with&quot;, options: [&quot;with&quot;, &quot;of&quot;, &quot;from&quot;, &quot;about&quot;] },<br />
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; { sentence: &quot;She is famous ___ her paintings&quot;, correct: &quot;for&quot;, options: [&quot;for&quot;, &quot;of&quot;, &quot;about&quot;, &quot;with&quot;] },<br />
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; { sentence: &quot;He is addicted ___ video games&quot;, correct: &quot;to&quot;, options: [&quot;to&quot;, &quot;with&quot;, &quot;for&quot;, &quot;of&quot;] },<br />
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; { sentence: &quot;They are pleased ___ the results&quot;, correct: &quot;with&quot;, options: [&quot;with&quot;, &quot;of&quot;, &quot;about&quot;, &quot;for&quot;] },<br />
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; { sentence: &quot;She is worried ___ the exam&quot;, correct: &quot;about&quot;, options: [&quot;about&quot;, &quot;of&quot;, &quot;for&quot;, &quot;with&quot;] },<br />
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; { sentence: &quot;He is bad ___ remembering names&quot;, correct: &quot;at&quot;, options: [&quot;at&quot;, &quot;in&quot;, &quot;on&quot;, &quot;of&quot;] }<br />
-&nbsp; &nbsp; &nbsp; &nbsp; ];</p>
-
-<p>&nbsp; &nbsp; &nbsp; &nbsp; let currentQuestion = 0;<br />
-&nbsp; &nbsp; &nbsp; &nbsp; let score = 0;<br />
-&nbsp; &nbsp; &nbsp; &nbsp; let shuffledQuestions = [...questions].sort(() =&gt; Math.random() - 0.5);</p>
-
-<p>&nbsp; &nbsp; &nbsp; &nbsp; function showQuestion() {<br />
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; if (currentQuestion &gt;= shuffledQuestions.length) {<br />
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; showFinalResult();<br />
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; return;<br />
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }</p>
-
-<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; const q = shuffledQuestions[currentQuestion];<br />
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; document.getElementById(&#39;question&#39;).textContent = q.sentence;<br />
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; document.getElementById(&#39;score&#39;).textContent = score;<br />
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; document.getElementById(&#39;total&#39;).textContent = shuffledQuestions.length;</p>
-
-<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; const optionsDiv = document.getElementById(&#39;options&#39;);<br />
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; optionsDiv.innerHTML = &#39;&#39;;</p>
-
-<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; const shuffledOptions = [...q.options].sort(() =&gt; Math.random() - 0.5);<br />
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<br />
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; shuffledOptions.forEach(option =&gt; {<br />
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; const btn = document.createElement(&#39;button&#39;);<br />
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; btn.textContent = option;<br />
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; btn.onclick = () =&gt; checkAnswer(option, q.correct, btn);<br />
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; optionsDiv.appendChild(btn);<br />
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; });<br />
-&nbsp; &nbsp; &nbsp; &nbsp; }</p>
-
-<p>&nbsp; &nbsp; &nbsp; &nbsp; function checkAnswer(selected, correct, btn) {<br />
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; const buttons = document.querySelectorAll(&#39;button&#39;);<br />
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; buttons.forEach(b =&gt; b.disabled = true);</p>
-
-<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; if (selected === correct) {<br />
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; btn.classList.add(&#39;correct&#39;);<br />
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; score++;<br />
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; } else {<br />
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; btn.classList.add(&#39;wrong&#39;);<br />
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; buttons.forEach(b =&gt; {<br />
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; if (b.textContent === correct) b.classList.add(&#39;correct&#39;);<br />
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; });<br />
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }</p>
-
-<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; setTimeout(() =&gt; {<br />
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; currentQuestion++;<br />
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; showQuestion();<br />
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }, 1500);<br />
-&nbsp; &nbsp; &nbsp; &nbsp; }</p>
-
-<p>&nbsp; &nbsp; &nbsp; &nbsp; function showFinalResult() {<br />
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; document.getElementById(&#39;game&#39;).style.display = &#39;none&#39;;<br />
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; const resultDiv = document.getElementById(&#39;finalResult&#39;);<br />
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; resultDiv.style.display = &#39;block&#39;;<br />
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<br />
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; let message = &#39;&#39;;<br />
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; const percentage = (score / shuffledQuestions.length) * 100;<br />
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<br />
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; if (percentage === 100) message = &#39;🏆 Excellent! Perfect score!&#39;;<br />
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; else if (percentage &gt;= 80) message = &#39;🌟 Great job!&#39;;<br />
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; else if (percentage &gt;= 60) message = &#39;👍 Good effort!&#39;;<br />
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; else message = &#39;📖 Keep practicing!&#39;;</p>
-
-<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; resultDiv.innerHTML = `<br />
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;div class=&quot;result&quot;&gt;<br />
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;h2&gt;Game Over!&lt;/h2&gt;<br />
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;p&gt;Your score: ${score} out of ${shuffledQuestions.length}&lt;/p&gt;<br />
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;p&gt;${message}&lt;/p&gt;<br />
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;button onclick=&quot;location.reload()&quot;&gt;Play Again&lt;/button&gt;<br />
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/div&gt;<br />
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; `;<br />
-&nbsp; &nbsp; &nbsp; &nbsp; }</p>
-
-<p>&nbsp; &nbsp; &nbsp; &nbsp; showQuestion();<br />
-&nbsp; &nbsp; &lt;/script&gt;<br />
-&lt;/body&gt;<br />
-&lt;/html&gt;</p>
+<p class="p1"><span class="s1">&lt;!DOCTYPE html&gt;</span></p>
+<p class="p1"><span class="s1">&lt;html lang="ru"&gt;</span></p>
+<p class="p1"><span class="s1">&lt;head&gt;</span></p>
+<p class="p1"><span class="s1">&lt;meta charset="UTF-8"&gt;</span></p>
+<p class="p1"><span class="s1">&lt;title&gt;Vocabulary Quiz — Personality Adjectives&lt;/title&gt;</span></p>
+<p class="p1"><span class="s1">&lt;style&gt;</span></p>
+<p class="p1"><span class="s1">  * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, sans-serif; }</span></p>
+<p class="p2"><span class="s2"></span><br></p>
+<p class="p1"><span class="s1">  body {</span></p>
+<p class="p1"><span class="s1">    min-height: 100vh;</span></p>
+<p class="p1"><span class="s1">    background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);</span></p>
+<p class="p1"><span class="s1">    display: flex;</span></p>
+<p class="p1"><span class="s1">    justify-content: center;</span></p>
+<p class="p1"><span class="s1">    align-items: center;</span></p>
+<p class="p1"><span class="s1">    padding: 20px;</span></p>
+<p class="p1"><span class="s1">    overflow-x: hidden;</span></p>
+<p class="p1"><span class="s1">  }</span></p>
+<p class="p2"><span class="s2"></span><br></p>
+<p class="p1"><span class="s1">  .quiz-container {</span></p>
+<p class="p1"><span class="s1">    background: rgba(255, 255, 255, 0.97);</span></p>
+<p class="p1"><span class="s1">    border-radius: 28px;</span></p>
+<p class="p1"><span class="s1">    padding: 40px 45px;</span></p>
+<p class="p1"><span class="s1">    max-width: 560px;</span></p>
+<p class="p1"><span class="s1">    width: 100%;</span></p>
+<p class="p1"><span class="s1">    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.3);</span></p>
+<p class="p1"><span class="s1">    position: relative;</span></p>
+<p class="p1"><span class="s1">    animation: slideIn 0.6s ease;</span></p>
+<p class="p1"><span class="s1">  }</span></p>
+<p class="p2"><span class="s2"></span><br></p>
+<p class="p1"><span class="s1">  @keyframes slideIn {</span></p>
+<p class="p1"><span class="s1">    from { opacity: 0; transform: translateY(30px); }</span></p>
+<p class="p1"><span class="s1">    to { opacity: 1; transform: translateY(0); }</span></p>
+<p class="p1"><span class="s1">  }</span></p>
+<p class="p2"><span class="s2"></span><br></p>
+<p class="p1"><span class="s1">  h1 {</span></p>
+<p class="p1"><span class="s1">    text-align: center;</span></p>
+<p class="p1"><span class="s1">    background: linear-gradient(135deg, #667eea, #f093fb);</span></p>
+<p class="p1"><span class="s1">    -webkit-background-clip: text;</span></p>
+<p class="p1"><span class="s1">    -webkit-text-fill-color: transparent;</span></p>
+<p class="p1"><span class="s1">    background-clip: text;</span></p>
+<p class="p1"><span class="s1">    font-size: 28px;</span></p>
+<p class="p1"><span class="s1">    margin-bottom: 8px;</span></p>
+<p class="p1"><span class="s1">    font-weight: 800;</span></p>
+<p class="p1"><span class="s1">  }</span></p>
+<p class="p2"><span class="s2"></span><br></p>
+<p class="p1"><span class="s1">  .subtitle {</span></p>
+<p class="p1"><span class="s1">    text-align: center;</span></p>
+<p class="p1"><span class="s1">    color: #888;</span></p>
+<p class="p1"><span class="s1">    font-size: 14px;</span></p>
+<p class="p1"><span class="s1">    margin-bottom: 25px;</span></p>
+<p class="p1"><span class="s1">  }</span></p>
+<p class="p2"><span class="s2"></span><br></p>
+<p class="p1"><span class="s1">  .stats {</span></p>
+<p class="p1"><span class="s1">    display: flex;</span></p>
+<p class="p1"><span class="s1">    justify-content: space-between;</span></p>
+<p class="p1"><span class="s1">    margin-bottom: 20px;</span></p>
+<p class="p1"><span class="s1">    font-size: 14px;</span></p>
+<p class="p1"><span class="s1">    color: #555;</span></p>
+<p class="p1"><span class="s1">    font-weight: 600;</span></p>
+<p class="p1"><span class="s1">  }</span></p>
+<p class="p2"><span class="s2"></span><br></p>
+<p class="p1"><span class="s1">  .stats span { color: #764ba2; }</span></p>
+<p class="p2"><span class="s2"></span><br></p>
+<p class="p1"><span class="s1">  .progress-bar {</span></p>
+<p class="p1"><span class="s1">    width: 100%;</span></p>
+<p class="p1"><span class="s1">    height: 8px;</span></p>
+<p class="p1"><span class="s1">    background: #eee;</span></p>
+<p class="p1"><span class="s1">    border-radius: 10px;</span></p>
+<p class="p1"><span class="s1">    overflow: hidden;</span></p>
+<p class="p1"><span class="s1">    margin-bottom: 30px;</span></p>
+<p class="p1"><span class="s1">  }</span></p>
+<p class="p2"><span class="s2"></span><br></p>
+<p class="p1"><span class="s1">  .progress-fill {</span></p>
+<p class="p1"><span class="s1">    height: 100%;</span></p>
+<p class="p1"><span class="s1">    background: linear-gradient(90deg, #667eea, #f093fb);</span></p>
+<p class="p1"><span class="s1">    width: 0%;</span></p>
+<p class="p1"><span class="s1">    transition: width 0.5s ease;</span></p>
+<p class="p1"><span class="s1">    border-radius: 10px;</span></p>
+<p class="p1"><span class="s1">  }</span></p>
+<p class="p2"><span class="s2"></span><br></p>
+<p class="p1"><span class="s1">  .question-card {</span></p>
+<p class="p1"><span class="s1">    background: linear-gradient(135deg, #667eea, #764ba2);</span></p>
+<p class="p1"><span class="s1">    border-radius: 20px;</span></p>
+<p class="p1"><span class="s1">    padding: 35px 25px;</span></p>
+<p class="p1"><span class="s1">    text-align: center;</span></p>
+<p class="p1"><span class="s1">    color: white;</span></p>
+<p class="p1"><span class="s1">    margin-bottom: 28px;</span></p>
+<p class="p1"><span class="s1">    box-shadow: 0 10px 30px rgba(118, 75, 162, 0.3);</span></p>
+<p class="p1"><span class="s1">    position: relative;</span></p>
+<p class="p1"><span class="s1">    overflow: hidden;</span></p>
+<p class="p1"><span class="s1">  }</span></p>
+<p class="p2"><span class="s2"></span><br></p>
+<p class="p1"><span class="s1">  .question-card::before {</span></p>
+<p class="p1"><span class="s1">    content: '';</span></p>
+<p class="p1"><span class="s1">    position: absolute;</span></p>
+<p class="p1"><span class="s1">    top: -50%;</span></p>
+<p class="p1"><span class="s1">    right: -50%;</span></p>
+<p class="p1"><span class="s1">    width: 200%;</span></p>
+<p class="p1"><span class="s1">    height: 200%;</span></p>
+<p class="p1"><span class="s1">    background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);</span></p>
+<p class="p1"><span class="s1">  }</span></p>
+<p class="p2"><span class="s2"></span><br></p>
+<p class="p1"><span class="s1">  .question-label {</span></p>
+<p class="p1"><span class="s1">    font-size: 13px;</span></p>
+<p class="p1"><span class="s1">    opacity: 0.85;</span></p>
+<p class="p1"><span class="s1">    margin-bottom: 10px;</span></p>
+<p class="p1"><span class="s1">    text-transform: uppercase;</span></p>
+<p class="p1"><span class="s1">    letter-spacing: 2px;</span></p>
+<p class="p1"><span class="s1">    position: relative;</span></p>
+<p class="p1"><span class="s1">  }</span></p>
+<p class="p2"><span class="s2"></span><br></p>
+<p class="p1"><span class="s1">  .question-word {</span></p>
+<p class="p1"><span class="s1">    font-size: 38px;</span></p>
+<p class="p1"><span class="s1">    font-weight: 800;</span></p>
+<p class="p1"><span class="s1">    position: relative;</span></p>
+<p class="p1"><span class="s1">    text-shadow: 0 2px 10px rgba(0,0,0,0.15);</span></p>
+<p class="p1"><span class="s1">  }</span></p>
+<p class="p2"><span class="s2"></span><br></p>
+<p class="p1"><span class="s1">  .options {</span></p>
+<p class="p1"><span class="s1">    display: flex;</span></p>
+<p class="p1"><span class="s1">    flex-direction: column;</span></p>
+<p class="p1"><span class="s1">    gap: 14px;</span></p>
+<p class="p1"><span class="s1">  }</span></p>
+<p class="p2"><span class="s2"></span><br></p>
+<p class="p1"><span class="s1">  .option-btn {</span></p>
+<p class="p1"><span class="s1">    background: white;</span></p>
+<p class="p1"><span class="s1">    border: 2px solid #e0e0e0;</span></p>
+<p class="p1"><span class="s1">    padding: 18px 22px;</span></p>
+<p class="p1"><span class="s1">    border-radius: 14px;</span></p>
+<p class="p1"><span class="s1">    font-size: 18px;</span></p>
+<p class="p1"><span class="s1">    font-weight: 600;</span></p>
+<p class="p1"><span class="s1">    color: #333;</span></p>
+<p class="p1"><span class="s1">    cursor: pointer;</span></p>
+<p class="p1"><span class="s1">    transition: all 0.25s ease;</span></p>
+<p class="p1"><span class="s1">    text-align: left;</span></p>
+<p class="p1"><span class="s1">    position: relative;</span></p>
+<p class="p1"><span class="s1">    overflow: hidden;</span></p>
+<p class="p1"><span class="s1">  }</span></p>
+<p class="p2"><span class="s2"></span><br></p>
+<p class="p1"><span class="s1">  .option-btn:hover:not(:disabled) {</span></p>
+<p class="p1"><span class="s1">    border-color: #764ba2;</span></p>
+<p class="p1"><span class="s1">    transform: translateX(5px);</span></p>
+<p class="p1"><span class="s1">    box-shadow: 0 6px 18px rgba(118, 75, 162, 0.2);</span></p>
+<p class="p1"><span class="s1">  }</span></p>
+<p class="p2"><span class="s2"></span><br></p>
+<p class="p1"><span class="s1">  .option-btn.correct {</span></p>
+<p class="p1"><span class="s1">    background: linear-gradient(135deg, #43e97b, #38f9d7);</span></p>
+<p class="p1"><span class="s1">    color: white;</span></p>
+<p class="p1"><span class="s1">    border-color: transparent;</span></p>
+<p class="p1"><span class="s1">    animation: pulse 0.5s;</span></p>
+<p class="p1"><span class="s1">  }</span></p>
+<p class="p2"><span class="s2"></span><br></p>
+<p class="p1"><span class="s1">  .option-btn.wrong {</span></p>
+<p class="p1"><span class="s1">    background: linear-gradient(135deg, #ff6b6b, #ee5a6f);</span></p>
+<p class="p1"><span class="s1">    color: white;</span></p>
+<p class="p1"><span class="s1">    border-color: transparent;</span></p>
+<p class="p1"><span class="s1">    animation: shake 0.5s;</span></p>
+<p class="p1"><span class="s1">  }</span></p>
+<p class="p2"><span class="s2"></span><br></p>
+<p class="p1"><span class="s1">  .option-btn:disabled { cursor: default; }</span></p>
+<p class="p2"><span class="s2"></span><br></p>
+<p class="p1"><span class="s1">  @keyframes pulse {</span></p>
+<p class="p1"><span class="s1">    0%, 100% { transform: scale(1); }</span></p>
+<p class="p1"><span class="s1">    50% { transform: scale(1.03); }</span></p>
+<p class="p1"><span class="s1">  }</span></p>
+<p class="p2"><span class="s2"></span><br></p>
+<p class="p1"><span class="s1">  @keyframes shake {</span></p>
+<p class="p1"><span class="s1">    0%, 100% { transform: translateX(0); }</span></p>
+<p class="p1"><span class="s1">    25% { transform: translateX(-8px); }</span></p>
+<p class="p1"><span class="s1">    75% { transform: translateX(8px); }</span></p>
+<p class="p1"><span class="s1">  }</span></p>
+<p class="p2"><span class="s2"></span><br></p>
+<p class="p1"><span class="s1">  .feedback {</span></p>
+<p class="p1"><span class="s1">    text-align: center;</span></p>
+<p class="p1"><span class="s1">    margin-top: 20px;</span></p>
+<p class="p1"><span class="s1">    font-size: 16px;</span></p>
+<p class="p1"><span class="s1">    font-weight: 700;</span></p>
+<p class="p1"><span class="s1">    min-height: 24px;</span></p>
+<p class="p1"><span class="s1">    transition: all 0.3s;</span></p>
+<p class="p1"><span class="s1">  }</span></p>
+<p class="p2"><span class="s2"></span><br></p>
+<p class="p1"><span class="s1">  .feedback.show-correct { color: #10b981; }</span></p>
+<p class="p1"><span class="s1">  .feedback.show-wrong { color: #ef4444; }</span></p>
+<p class="p2"><span class="s2"></span><br></p>
+<p class="p1"><span class="s1">  .next-btn {</span></p>
+<p class="p1"><span class="s1">    display: block;</span></p>
+<p class="p1"><span class="s1">    margin: 25px auto 0;</span></p>
+<p class="p1"><span class="s1">    padding: 14px 45px;</span></p>
+<p class="p1"><span class="s1">    background: linear-gradient(135deg, #667eea, #764ba2);</span></p>
+<p class="p1"><span class="s1">    color: white;</span></p>
+<p class="p1"><span class="s1">    border: none;</span></p>
+<p class="p1"><span class="s1">    border-radius: 30px;</span></p>
+<p class="p1"><span class="s1">    font-size: 16px;</span></p>
+<p class="p1"><span class="s1">    font-weight: 700;</span></p>
+<p class="p1"><span class="s1">    cursor: pointer;</span></p>
+<p class="p1"><span class="s1">    transition: all 0.3s;</span></p>
+<p class="p1"><span class="s1">    box-shadow: 0 8px 20px rgba(118, 75, 162, 0.35);</span></p>
+<p class="p1"><span class="s1">    opacity: 0;</span></p>
+<p class="p1"><span class="s1">    pointer-events: none;</span></p>
+<p class="p1"><span class="s1">  }</span></p>
+<p class="p2"><span class="s2"></span><br></p>
+<p class="p1"><span class="s1">  .next-btn.visible {</span></p>
+<p class="p1"><span class="s1">    opacity: 1;</span></p>
+<p class="p1"><span class="s1">    pointer-events: auto;</span></p>
+<p class="p1"><span class="s1">  }</span></p>
+<p class="p2"><span class="s2"></span><br></p>
+<p class="p1"><span class="s1">  .next-btn:hover {</span></p>
+<p class="p1"><span class="s1">    transform: translateY(-3px);</span></p>
+<p class="p1"><span class="s1">    box-shadow: 0 12px 25px rgba(118, 75, 162, 0.5);</span></p>
+<p class="p1"><span class="s1">  }</span></p>
+<p class="p2"><span class="s2"></span><br></p>
+<p class="p1"><span class="s1">  /* Экран результатов */</span></p>
+<p class="p1"><span class="s1">  .result-screen {</span></p>
+<p class="p1"><span class="s1">    text-align: center;</span></p>
+<p class="p1"><span class="s1">    padding: 20px 0;</span></p>
+<p class="p1"><span class="s1">  }</span></p>
+<p class="p2"><span class="s2"></span><br></p>
+<p class="p1"><span class="s1">  .result-emoji {</span></p>
+<p class="p1"><span class="s1">    font-size: 80px;</span></p>
+<p class="p1"><span class="s1">    margin-bottom: 15px;</span></p>
+<p class="p1"><span class="s1">    animation: bounce 1s ease infinite;</span></p>
+<p class="p1"><span class="s1">  }</span></p>
+<p class="p2"><span class="s2"></span><br></p>
+<p class="p1"><span class="s1">  @keyframes bounce {</span></p>
+<p class="p1"><span class="s1">    0%, 100% { transform: translateY(0); }</span></p>
+<p class="p1"><span class="s1">    50% { transform: translateY(-15px); }</span></p>
+<p class="p1"><span class="s1">  }</span></p>
+<p class="p2"><span class="s2"></span><br></p>
+<p class="p1"><span class="s1">  .result-title {</span></p>
+<p class="p1"><span class="s1">    font-size: 32px;</span></p>
+<p class="p1"><span class="s1">    font-weight: 800;</span></p>
+<p class="p1"><span class="s1">    background: linear-gradient(135deg, #667eea, #f093fb);</span></p>
+<p class="p1"><span class="s1">    -webkit-background-clip: text;</span></p>
+<p class="p1"><span class="s1">    -webkit-text-fill-color: transparent;</span></p>
+<p class="p1"><span class="s1">    background-clip: text;</span></p>
+<p class="p1"><span class="s1">    margin-bottom: 10px;</span></p>
+<p class="p1"><span class="s1">  }</span></p>
+<p class="p2"><span class="s2"></span><br></p>
+<p class="p1"><span class="s1">  .result-score {</span></p>
+<p class="p1"><span class="s1">    font-size: 48px;</span></p>
+<p class="p1"><span class="s1">    font-weight: 800;</span></p>
+<p class="p1"><span class="s1">    color: #764ba2;</span></p>
+<p class="p1"><span class="s1">    margin: 15px 0;</span></p>
+<p class="p1"><span class="s1">  }</span></p>
+<p class="p2"><span class="s2"></span><br></p>
+<p class="p1"><span class="s1">  .result-message {</span></p>
+<p class="p1"><span class="s1">    color: #666;</span></p>
+<p class="p1"><span class="s1">    font-size: 16px;</span></p>
+<p class="p1"><span class="s1">    margin-bottom: 25px;</span></p>
+<p class="p1"><span class="s1">  }</span></p>
+<p class="p2"><span class="s2"></span><br></p>
+<p class="p1"><span class="s1">  .restart-btn {</span></p>
+<p class="p1"><span class="s1">    padding: 14px 45px;</span></p>
+<p class="p1"><span class="s1">    background: linear-gradient(135deg, #667eea, #764ba2);</span></p>
+<p class="p1"><span class="s1">    color: white;</span></p>
+<p class="p1"><span class="s1">    border: none;</span></p>
+<p class="p1"><span class="s1">    border-radius: 30px;</span></p>
+<p class="p1"><span class="s1">    font-size: 16px;</span></p>
+<p class="p1"><span class="s1">    font-weight: 700;</span></p>
+<p class="p1"><span class="s1">    cursor: pointer;</span></p>
+<p class="p1"><span class="s1">    box-shadow: 0 8px 20px rgba(118, 75, 162, 0.35);</span></p>
+<p class="p1"><span class="s1">    transition: all 0.3s;</span></p>
+<p class="p1"><span class="s1">  }</span></p>
+<p class="p2"><span class="s2"></span><br></p>
+<p class="p1"><span class="s1">  .restart-btn:hover {</span></p>
+<p class="p1"><span class="s1">    transform: translateY(-3px);</span></p>
+<p class="p1"><span class="s1">    box-shadow: 0 12px 25px rgba(118, 75, 162, 0.5);</span></p>
+<p class="p1"><span class="s1">  }</span></p>
+<p class="p2"><span class="s2"></span><br></p>
+<p class="p1"><span class="s1">  .hidden { display: none; }</span></p>
+<p class="p1"><span class="s1">&lt;/style&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/head&gt;</span></p>
+<p class="p1"><span class="s1">&lt;body&gt;</span></p>
+<p class="p2"><span class="s2"></span><br></p>
+<p class="p1"><span class="s1">&lt;div class="quiz-container"&gt;</span></p>
+<p class="p1"><span class="s1">  &lt;h1&gt;✨ Vocabulary Quiz ✨&lt;/h1&gt;</span></p>
+<p class="p1"><span class="s1">  &lt;p class="subtitle"&gt;Personality Adjectives — выбери правильный перевод&lt;/p&gt;</span></p>
+<p class="p2"><span class="s2"></span><br></p>
+<p class="p1"><span class="s1">  &lt;!-- Игровой экран --&gt;</span></p>
+<p class="p1"><span class="s1">  &lt;div id="game-screen"&gt;</span></p>
+<p class="p1"><span class="s1">    &lt;div class="stats"&gt;</span></p>
+<p class="p1"><span class="s1">      &lt;div&gt;Вопрос: &lt;span id="current-q"&gt;1&lt;/span&gt; / &lt;span id="total-q"&gt;10&lt;/span&gt;&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">      &lt;div&gt;Счёт: &lt;span id="score"&gt;0&lt;/span&gt;&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">    &lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">    &lt;div class="progress-bar"&gt;&lt;div class="progress-fill" id="progress"&gt;&lt;/div&gt;&lt;/div&gt;</span></p>
+<p class="p2"><span class="s2"></span><br></p>
+<p class="p1"><span class="s1">    &lt;div class="question-card"&gt;</span></p>
+<p class="p1"><span class="s1">      &lt;div class="question-label"&gt;Переведи на английский&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">      &lt;div class="question-word" id="question-word"&gt;надежный&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">    &lt;/div&gt;</span></p>
+<p class="p2"><span class="s2"></span><br></p>
+<p class="p1"><span class="s1">    &lt;div class="options" id="options"&gt;&lt;/div&gt;</span></p>
+<p class="p2"><span class="s2"></span><br></p>
+<p class="p1"><span class="s1">    &lt;div class="feedback" id="feedback"&gt;&lt;/div&gt;</span></p>
+<p class="p2"><span class="s2"></span><br></p>
+<p class="p1"><span class="s1">    &lt;button class="next-btn" id="next-btn"&gt;Далее →&lt;/button&gt;</span></p>
+<p class="p1"><span class="s1">  &lt;/div&gt;</span></p>
+<p class="p2"><span class="s2"></span><br></p>
+<p class="p1"><span class="s1">  &lt;!-- Экран результатов --&gt;</span></p>
+<p class="p1"><span class="s1">  &lt;div id="result-screen" class="hidden"&gt;</span></p>
+<p class="p1"><span class="s1">    &lt;div class="result-screen"&gt;</span></p>
+<p class="p1"><span class="s1">      &lt;div class="result-emoji" id="result-emoji"&gt;🎉&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">      &lt;div class="result-title"&gt;Quiz Complete!&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">      &lt;div class="result-score" id="result-score"&gt;0 / 10&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">      &lt;div class="result-message" id="result-message"&gt;Отличный результат!&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">      &lt;button class="restart-btn" onclick="restartQuiz()"&gt;🔄 Играть снова&lt;/button&gt;</span></p>
+<p class="p1"><span class="s1">    &lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">  &lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/div&gt;</span></p>
+<p class="p2"><span class="s2"></span><br></p>
+<p class="p1"><span class="s1">&lt;script&gt;</span></p>
+<p class="p1"><span class="s1">  const vocabulary = [</span></p>
+<p class="p1"><span class="s1">    { en: "ambitious", ru: "амбициозный" },</span></p>
+<p class="p1"><span class="s1">    { en: "generous", ru: "щедрый" },</span></p>
+<p class="p1"><span class="s1">    { en: "stubborn", ru: "упрямый" },</span></p>
+<p class="p1"><span class="s1">    { en: "patient", ru: "терпеливый" },</span></p>
+<p class="p1"><span class="s1">    { en: "selfish", ru: "эгоистичный" },</span></p>
+<p class="p1"><span class="s1">    { en: "reliable", ru: "надёжный" },</span></p>
+<p class="p1"><span class="s1">    { en: "sensitive", ru: "чувствительный" },</span></p>
+<p class="p1"><span class="s1">    { en: "modest", ru: "скромный" },</span></p>
+<p class="p1"><span class="s1">    { en: "talkative", ru: "разговорчивый" },</span></p>
+<p class="p1"><span class="s1">    { en: "easy-going", ru: "покладистый" },</span></p>
+<p class="p1"><span class="s1">    { en: "strict", ru: "строгий" },</span></p>
+<p class="p1"><span class="s1">    { en: "sincere", ru: "искренний" },</span></p>
+<p class="p1"><span class="s1">    { en: "competitive", ru: "соревновательный" },</span></p>
+<p class="p1"><span class="s1">    { en: "polite", ru: "вежливый" },</span></p>
+<p class="p1"><span class="s1">    { en: "arrogant", ru: "высокомерный" },</span></p>
+<p class="p1"><span class="s1">    { en: "anxious", ru: "тревожный" },</span></p>
+<p class="p1"><span class="s1">    { en: "broad-minded", ru: "с широким кругозором" },</span></p>
+<p class="p1"><span class="s1">    { en: "reserved", ru: "сдержанный" }</span></p>
+<p class="p1"><span class="s1">  ];</span></p>
+<p class="p2"><span class="s2"></span><br></p>
+<p class="p1"><span class="s1">  const TOTAL_QUESTIONS = 10;</span></p>
+<p class="p1"><span class="s1">  let questions = [];</span></p>
+<p class="p1"><span class="s1">  let currentIndex = 0;</span></p>
+<p class="p1"><span class="s1">  let score = 0;</span></p>
+<p class="p1"><span class="s1">  let answered = false;</span></p>
+<p class="p2"><span class="s2"></span><br></p>
+<p class="p1"><span class="s1">  function shuffle(arr) {</span></p>
+<p class="p1"><span class="s1">    const a = [...arr];</span></p>
+<p class="p1"><span class="s1">    for (let i = a.length - 1; i &gt; 0; i--) {</span></p>
+<p class="p1"><span class="s1">      const j = Math.floor(Math.random() * (i + 1));</span></p>
+<p class="p1"><span class="s1">      [a[i], a[j]] = [a[j], a[i]];</span></p>
+<p class="p1"><span class="s1">    }</span></p>
+<p class="p1"><span class="s1">    return a;</span></p>
+<p class="p1"><span class="s1">  }</span></p>
+<p class="p2"><span class="s2"></span><br></p>
+<p class="p1"><span class="s1">  function generateQuestions() {</span></p>
+<p class="p1"><span class="s1">    const shuffled = shuffle(vocabulary).slice(0, TOTAL_QUESTIONS);</span></p>
+<p class="p1"><span class="s1">    return shuffled.map(item =&gt; {</span></p>
+<p class="p1"><span class="s1">      // 2 дистрактора из других слов</span></p>
+<p class="p1"><span class="s1">      const distractors = shuffle(vocabulary.filter(v =&gt; v.en !== item.en))</span></p>
+<p class="p1"><span class="s1">        .slice(0, 2)</span></p>
+<p class="p1"><span class="s1">        .map(v =&gt; v.en);</span></p>
+<p class="p1"><span class="s1">      const options = shuffle([item.en, ...distractors]);</span></p>
+<p class="p1"><span class="s1">      return { ru: item.ru, correct: item.en, options };</span></p>
+<p class="p1"><span class="s1">    });</span></p>
+<p class="p1"><span class="s1">  }</span></p>
+<p class="p2"><span class="s2"></span><br></p>
+<p class="p1"><span class="s1">  function renderQuestion() {</span></p>
+<p class="p1"><span class="s1">    answered = false;</span></p>
+<p class="p1"><span class="s1">    const q = questions[currentIndex];</span></p>
+<p class="p1"><span class="s1">    document.getElementById('question-word').textContent = q.ru;</span></p>
+<p class="p1"><span class="s1">    document.getElementById('current-q').textContent = currentIndex + 1;</span></p>
+<p class="p1"><span class="s1">    document.getElementById('score').textContent = score;</span></p>
+<p class="p1"><span class="s1">    document.getElementById('feedback').textContent = '';</span></p>
+<p class="p1"><span class="s1">    document.getElementById('feedback').className = 'feedback';</span></p>
+<p class="p1"><span class="s1">    document.getElementById('next-btn').classList.remove('visible');</span></p>
+<p class="p2"><span class="s2"></span><br></p>
+<p class="p1"><span class="s1">    const progress = ((currentIndex) / TOTAL_QUESTIONS) * 100;</span></p>
+<p class="p1"><span class="s1">    document.getElementById('progress').style.width = progress + '%';</span></p>
+<p class="p2"><span class="s2"></span><br></p>
+<p class="p1"><span class="s1">    const optionsEl = document.getElementById('options');</span></p>
+<p class="p1"><span class="s1">    optionsEl.innerHTML = '';</span></p>
+<p class="p1"><span class="s1">    q.options.forEach(opt =&gt; {</span></p>
+<p class="p1"><span class="s1">      const btn = document.createElement('button');</span></p>
+<p class="p1"><span class="s1">      btn.className = 'option-btn';</span></p>
+<p class="p1"><span class="s1">      btn.textContent = opt;</span></p>
+<p class="p1"><span class="s1">      btn.onclick = () =&gt; selectOption(btn, opt, q.correct);</span></p>
+<p class="p1"><span class="s1">      optionsEl.appendChild(btn);</span></p>
+<p class="p1"><span class="s1">    });</span></p>
+<p class="p1"><span class="s1">  }</span></p>
+<p class="p2"><span class="s2"></span><br></p>
+<p class="p1"><span class="s1">  function selectOption(btn, selected, correct) {</span></p>
+<p class="p1"><span class="s1">    if (answered) return;</span></p>
+<p class="p1"><span class="s1">    answered = true;</span></p>
+<p class="p2"><span class="s2"></span><br></p>
+<p class="p1"><span class="s1">    const allBtns = document.querySelectorAll('.option-btn');</span></p>
+<p class="p1"><span class="s1">    allBtns.forEach(b =&gt; {</span></p>
+<p class="p1"><span class="s1">      b.disabled = true;</span></p>
+<p class="p1"><span class="s1">      if (b.textContent === correct) b.classList.add('correct');</span></p>
+<p class="p1"><span class="s1">    });</span></p>
+<p class="p2"><span class="s2"></span><br></p>
+<p class="p1"><span class="s1">    const feedback = document.getElementById('feedback');</span></p>
+<p class="p1"><span class="s1">    if (selected === correct) {</span></p>
+<p class="p1"><span class="s1">      score++;</span></p>
+<p class="p1"><span class="s1">      document.getElementById('score').textContent = score;</span></p>
+<p class="p1"><span class="s1">      feedback.textContent = '✅ Отлично! Правильно!';</span></p>
+<p class="p1"><span class="s1">      feedback.className = 'feedback show-correct';</span></p>
+<p class="p1"><span class="s1">    } else {</span></p>
+<p class="p1"><span class="s1">      btn.classList.add('wrong');</span></p>
+<p class="p1"><span class="s1">      feedback.textContent = `❌ Правильный ответ: ${correct}`;</span></p>
+<p class="p1"><span class="s1">      feedback.className = 'feedback show-wrong';</span></p>
+<p class="p1"><span class="s1">    }</span></p>
+<p class="p2"><span class="s2"></span><br></p>
+<p class="p1"><span class="s1">    document.getElementById('next-btn').classList.add('visible');</span></p>
+<p class="p1"><span class="s1">  }</span></p>
+<p class="p2"><span class="s2"></span><br></p>
+<p class="p1"><span class="s1">  function nextQuestion() {</span></p>
+<p class="p1"><span class="s1">    currentIndex++;</span></p>
+<p class="p1"><span class="s1">    if (currentIndex &gt;= TOTAL_QUESTIONS) {</span></p>
+<p class="p1"><span class="s1">      showResults();</span></p>
+<p class="p1"><span class="s1">    } else {</span></p>
+<p class="p1"><span class="s1">      renderQuestion();</span></p>
+<p class="p1"><span class="s1">    }</span></p>
+<p class="p1"><span class="s1">  }</span></p>
+<p class="p2"><span class="s2"></span><br></p>
+<p class="p1"><span class="s1">  function showResults() {</span></p>
+<p class="p1"><span class="s1">    document.getElementById('game-screen').classList.add('hidden');</span></p>
+<p class="p1"><span class="s1">    document.getElementById('result-screen').classList.remove('hidden');</span></p>
+<p class="p1"><span class="s1">    document.getElementById('result-score').textContent = `${score} / ${TOTAL_QUESTIONS}`;</span></p>
+<p class="p2"><span class="s2"></span><br></p>
+<p class="p1"><span class="s1">    const percent = (score / TOTAL_QUESTIONS) * 100;</span></p>
+<p class="p1"><span class="s1">    let emoji, message;</span></p>
+<p class="p1"><span class="s1">    if (percent === 100) { emoji = '🏆'; message = 'Идеально! Ты настоящий мастер лексики!'; }</span></p>
+<p class="p1"><span class="s1">    else if (percent &gt;= 80) { emoji = '🎉'; message = 'Превосходно! Отличный результат!'; }</span></p>
+<p class="p1"><span class="s1">    else if (percent &gt;= 60) { emoji = '👍'; message = 'Хороший результат! Продолжай в том же духе!'; }</span></p>
+<p class="p1"><span class="s1">    else if (percent &gt;= 40) { emoji = '💪'; message = 'Неплохо, но есть куда расти!'; }</span></p>
+<p class="p1"><span class="s1">    else { emoji = '📚'; message = 'Стоит повторить слова. Ты справишься!'; }</span></p>
+<p class="p2"><span class="s2"></span><br></p>
+<p class="p1"><span class="s1">    document.getElementById('result-emoji').textContent = emoji;</span></p>
+<p class="p1"><span class="s1">    document.getElementById('result-message').textContent = message;</span></p>
+<p class="p1"><span class="s1">  }</span></p>
+<p class="p2"><span class="s2"></span><br></p>
+<p class="p1"><span class="s1">  function restartQuiz() {</span></p>
+<p class="p1"><span class="s1">    currentIndex = 0;</span></p>
+<p class="p1"><span class="s1">    score = 0;</span></p>
+<p class="p1"><span class="s1">    questions = generateQuestions();</span></p>
+<p class="p1"><span class="s1">    document.getElementById('total-q').textContent = TOTAL_QUESTIONS;</span></p>
+<p class="p1"><span class="s1">    document.getElementById('result-screen').classList.add('hidden');</span></p>
+<p class="p1"><span class="s1">    document.getElementById('game-screen').classList.remove('hidden');</span></p>
+<p class="p1"><span class="s1">    renderQuestion();</span></p>
+<p class="p1"><span class="s1">  }</span></p>
+<p class="p2"><span class="s2"></span><br></p>
+<p class="p1"><span class="s1">  document.getElementById('next-btn').onclick = nextQuestion;</span></p>
+<p class="p2"><span class="s2"></span><br></p>
+<p class="p1"><span class="s1">  // Запуск</span></p>
+<p class="p1"><span class="s1">  questions = generateQuestions();</span></p>
+<p class="p1"><span class="s1">  document.getElementById('total-q').textContent = TOTAL_QUESTIONS;</span></p>
+<p class="p1"><span class="s1">  renderQuestion();</span></p>
+<p class="p1"><span class="s1">&lt;/script&gt;</span></p>
+<p class="p2"><span class="s2"></span><br></p>
+<p class="p1"><span class="s1">&lt;/body&gt;</span></p>
+<p class="p3"><span class="s2">&lt;/html&gt;</span></p>
 </body>
 </html>
